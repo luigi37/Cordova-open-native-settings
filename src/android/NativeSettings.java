@@ -52,17 +52,17 @@ public class NativeSettings extends CordovaPlugin {
 		
     //https://stackoverflow.com/questions/32366649/any-way-to-link-to-the-android-notification-settings-for-my-app
 		
-		Intent intent = new Intent();
+		//Intent intent = new Intent();
 intent.setAction("android.settings.APP_NOTIFICATION_SETTINGS");
 
 //for Android 5-7
-intent.putExtra("app_package", getPackageName());
+intent.putExtra("app_package", this.cordova.getActivity().getPackageName());
 intent.putExtra("app_uid", getApplicationInfo().uid);
 
 // for Android O
-intent.putExtra("android.provider.extra.APP_PACKAGE", getPackageName());
+intent.putExtra("android.provider.extra.APP_PACKAGE", this.cordova.getActivity().getPackageName());
 
-startActivity(intent);
+//startActivity(intent);
 /*if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
     intent.setAction("android.settings.APP_NOTIFICATION_SETTINGS");
     intent.putExtra("app_package", getActivity().getPackageName());
