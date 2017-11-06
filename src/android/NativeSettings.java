@@ -51,7 +51,7 @@ public class NativeSettings extends CordovaPlugin {
     //intent = new Intent(android.provider.Settings.ACTION_APP_NOTIFICATION_SETTINGS);
 		
     //https://stackoverflow.com/questions/32366649/any-way-to-link-to-the-android-notification-settings-for-my-app
-		
+	/*	
 		//Intent intent = new Intent();
 intent.setAction("android.settings.APP_NOTIFICATION_SETTINGS");
 
@@ -62,19 +62,20 @@ intent.putExtra("app_uid", this.cordova.getActivity().getApplicationInfo().uid);
 // for Android O
 intent.putExtra("android.provider.extra.APP_PACKAGE", this.cordova.getActivity().getPackageName());
 this.cordova.getActivity().startActivity(intent);
-/*if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+		*/
+if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
     intent.setAction("android.settings.APP_NOTIFICATION_SETTINGS");
-    intent.putExtra("app_package", getActivity().getPackageName());
-    intent.putExtra("app_uid", getActivity().getApplicationInfo().uid);
+    intent.putExtra("app_package",  this.cordova.getActivity().getPackageName());
+    intent.putExtra("app_uid",  this.cordova.getActivity().getApplicationInfo().uid);
     //startActivity(intent);
 } else if (android.os.Build.VERSION.SDK_INT == Build.VERSION_CODES.KITKAT) {
     intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
     intent.addCategory(Intent.CATEGORY_DEFAULT);
-    intent.setData(Uri.parse("package:" + getActivity().getPackageName()));
+    intent.setData(Uri.parse("package:" +  this.cordova.getActivity().getPackageName()));
     //startActivity(intent);
 }
     //Intent intent = new Intent();
-    
+ /*   
     if(android.os.Build.VERSION.SDK_INT > Build.VERSION_CODES.N_MR1){
         intent.setAction("android.settings.APP_NOTIFICATION_SETTINGS");
         intent.putExtra("android.provider.extra.APP_PACKAGE", context.getPackageName());
