@@ -57,7 +57,7 @@ intent.setAction("android.settings.APP_NOTIFICATION_SETTINGS");
 
 //for Android 5-7
 intent.putExtra("app_package", this.cordova.getActivity().getPackageName());
-intent.putExtra("app_uid", getApplicationInfo().uid);
+intent.putExtra("app_uid", this.cordova.getApplicationInfo().uid);
 
 // for Android O
 intent.putExtra("android.provider.extra.APP_PACKAGE", this.cordova.getActivity().getPackageName());
