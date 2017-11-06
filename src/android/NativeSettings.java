@@ -11,6 +11,17 @@ package com.phonegap.plugins.nativesettings;
 import org.json.JSONArray;
 import org.json.JSONException;
 
+//lp
+import android.app.Activity;
+import android.app.NotificationManager;
+import android.content.BroadcastReceiver;
+import android.content.IntentFilter;
+import android.os.Bundle;
+import android.support.v4.app.NotificationCompat;
+import android.view.View;
+import android.widget.TextView;
+//lp
+
 import android.content.Intent;
 import android.content.Context;
 import android.net.Uri;
