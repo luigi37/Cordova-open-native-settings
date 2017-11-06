@@ -51,7 +51,7 @@ public class NativeSettings extends CordovaPlugin {
     //intent = new Intent(android.provider.Settings.ACTION_APP_NOTIFICATION_SETTINGS);
 		
     //https://stackoverflow.com/questions/32366649/any-way-to-link-to-the-android-notification-settings-for-my-app
-/*
+
     //Intent intent = new Intent();
     if(android.os.Build.VERSION.SDK_INT > Build.VERSION_CODES.N_MR1){
         intent.setAction("android.settings.APP_NOTIFICATION_SETTINGS");
@@ -66,7 +66,7 @@ public class NativeSettings extends CordovaPlugin {
         intent.setData(Uri.parse("package:" + context.getPackageName()));
     }
     //context.startActivity(intent); 
-*/
+/*
 		
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             Intent oreoIntent = new Intent();
@@ -87,7 +87,7 @@ public class NativeSettings extends CordovaPlugin {
             intent.addCategory(Intent.CATEGORY_DEFAULT);
             intent.setData(Uri.parse("package:" + context.getPackageName()));
         }
-
+*/
 		
 		
         } else if (action.equals("application_notification_listener")) { //lp
